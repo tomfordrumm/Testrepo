@@ -4,5 +4,16 @@
   </head>
   <body>
     <h1>my app</h1>
+    <span id="hello">Hello world!</span>
+    <input type="text" id="name"/>
+
+    <script type="text/javascript">
+      const element = document.getElementById('name');
+      const spanElement = document.getElementById('hello');
+      element.addEventListener('change', (event) => {
+        const text = event.target.value;
+        spanElement.innerText = `Hello ${text}`;
+      })
+    </script>
   </body>
 </html>
